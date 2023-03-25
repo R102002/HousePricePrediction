@@ -1,0 +1,84 @@
+{% load static %}
+<html>
+    <head>
+        <title>Predict</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width,initial-scale=1">
+        
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>
+            .main{
+                position:fixed;
+                top:120px;
+                left:410px;
+                width:700px;
+                background-color:gainsboro;
+                align-items:center;
+                border-radius:5%;
+            }
+            div{
+                padding:15px;
+            }
+            input[type=submit]{
+                background-color:Black;
+                color:white;
+                cursor:pointer;
+                padding: 16px 32px;
+            }
+            h1{
+                font-size:40px;
+            }
+            h2{
+                font-size:30px;
+                color:DarkRed;
+            }
+            body{
+                background-image:url("{% static 'house-prices-rising.jpg' %}");
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+        </style>
+    </head>
+<body style="text-align:center;">
+    <div class="main">
+        <h1>Please enter the following values</h1>
+        <form action="result"> <!--when submit btn will be clicked then predict/result page will be open -->
+            <div class="row">
+                <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>BHK_NO</p>
+                    <input type="text" name="n1">
+                </div>
+                <div class="col-sm-4" style="background-color:DarkSeaGreen;">
+                    <p>SQUARE_FT</p>
+                    <input type="text" name="n2">
+                </div>
+                <div class="col-sm-4" style="background-color:LightPink;">
+                    <p>LONGITUDE</p>
+                    <input type="text" name="n3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="background-color:Turquoise;">
+                    <p>LATITUDE</p>
+                    <input type="text" name="n4">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="PREDICT">
+            </div>
+        </form>
+        <div class="row">
+            <h2>{{result2}}</h2>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-4QF4T/APMHe4EwhLYArWerYsPoPpM7Kf/kW8EclCZebOtFfZKtVQgOm8gRi1KsUJ" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
